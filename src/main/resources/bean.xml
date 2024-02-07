@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id= "emp" class="Employee" scope="prototype">
+        <property name="id" value="1"></property>
+        <property name="name" value="Sreenath"></property>
+        <property name="salary" value="4567.0"></property>
+    </bean>
+
+    <bean id= "emp2" class="Employee" scope="singleton">
+        <property name="id" value="2"></property>
+        <property name="name" value="name 2"></property>
+        <property name="salary" value="9999.0"></property>
+        <property name="address" ref="address1"></property>
+    </bean>
+    <bean id="address1" class="Address">
+        <property name="doorNo" value="22"></property>
+        <property name="city" value="Chennai"></property>
+        <property name="pincode" value="560099"></property>
+    </bean>
+
+    <bean id= "emp3" class="Employee">
+        <property name="id" value="3"></property>
+        <property name="name" value="name 3"></property>
+        <property name="salary" value="6666.0"></property>
+        <property name="address" ref="address1"></property>
+    </bean>
+
+</beans>
