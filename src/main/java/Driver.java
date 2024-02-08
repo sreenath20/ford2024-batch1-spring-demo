@@ -7,6 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Driver {
     public static void main(String[] arg){
 
+        //XML
 //        System.out.println("Hello Spring bean creation using XML");
 //        ApplicationContext appContext = new ClassPathXmlApplicationContext("bean.xml");
 //        Employee empRef = (Employee) appContext.getBean("emp");
@@ -25,16 +26,20 @@ public class Driver {
         // bean creation using java configuration
         //JavaConfigApplicationContext // depricated
 
-        ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfiguration.class);
+//        // Java
+//        ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfiguration.class);
+//
+//        Employee emp1 = (Employee) appContext.getBean("employee");
+//        System.out.println(emp1);
+//
+//        Address address = (Address) appContext.getBean("address");
+//        System.out.println(address);
+//
+//        Employee emp2 = (Employee) appContext.getBean("employee2");
+//        System.out.println(emp2);
+//
+        // Annotation
 
-        Employee emp1 = (Employee) appContext.getBean("employee");
-        System.out.println(emp1);
-
-        Address address = (Address) appContext.getBean("address");
-        System.out.println(address);
-
-        Employee emp2 = (Employee) appContext.getBean("employee2");
-        System.out.println(emp2);
 
     }
 }
